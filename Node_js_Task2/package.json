@@ -7,8 +7,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "uuid": "^11.0.2"
-  }
+  "description": ""
 }
