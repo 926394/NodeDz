@@ -4,7 +4,7 @@ function namePerson() {
   let answ1 = arr[Math.floor(Math.random() * arr.length)];
   return answ1;
 }
-console.log("Random name: " + namePerson());
+// console.log("Random name: " + namePerson());
 
 // Random date selection function
 function birthdayPerson() {
@@ -18,7 +18,7 @@ function birthdayPerson() {
   let answ2 = birth[Math.floor(Math.random() * birth.length)].birthday;
   return answ2;
 }
-console.log("Random date: " + birthdayPerson());
+// console.log("Random date: " + birthdayPerson());
 
 
 // Random address selection function
@@ -35,7 +35,7 @@ function adressPerson() {
 
   return answ3;
 }
-console.log("Random date: " + adressPerson());
+// console.log("Random date: " + adressPerson());
 
 
 
@@ -52,6 +52,6 @@ function footballClubPerson() {
   return answ4;
 }
 
-console.log("Random footballClub: " + footballClubPerson());
+// console.log("Random footballClub: " + footballClubPerson());
 
 module.exports = {namePerson, birthdayPerson, adressPerson, footballClubPerson};
