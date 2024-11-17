@@ -2,6 +2,8 @@ const http = require('http');
 
 let countList = 0;
 let countList1 = 0;
+let countList2 = 0;
+
 
 const server = http.createServer((req, res) => {
   console.log('Запрос получен');
@@ -34,8 +36,9 @@ const server = http.createServer((req, res) => {
     res.writeHead(404, {
       'Content-Type': 'text/html; charset=UTF-8',
     })
+    res.write('<h1>Страница не найдена!<h1>');
     res.write(`<br>Количество просмотров: ${countList2}`);
-    res.end('<h1>Страница не найдена!<h1>');
+    // res.end('<h1>Страница не найдена!<h1>');
     countList2++;
   }
 
