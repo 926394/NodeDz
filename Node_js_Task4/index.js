@@ -29,4 +29,27 @@ app.post("/users", (req, res) => {
   });
 });
 
+/**
+ * Метод внесения изменении в данные о пользователе, по id
+ */
+app.put('/users/:id', (req, res) => {
+    const user = users.find((user) => user.id === Number(req.params.id));
+  
+    // проверка наличия данных
+    if (user) {
+      const { firstName, secondName, age, city } = req.body;
+      user.firstName = firstName;
+      user.secondName = secondName;
+      user.age = age;
+      user.city = city;
+  
+      res.send({user});
+    } else {
+      res.status(404);
+      res.send({user: null})
+    }
+});
+
+
+
 app.listen(3000);
