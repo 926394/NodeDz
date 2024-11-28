@@ -1,5 +1,16 @@
-const port = 3000;
+const express = require('express');
 
-app.listen(port, () => {
-    console.log(`Сервер запущен на порту ${port}`);
+const app = express();
+
+const users = [];
+
+let uniqueID = 0;
+
+/**
+ * Получение списка пользователей 
+ */
+app.get('/users', (reg, res) => {
+  res.send({users});
 });
+
+app.listen(3000);
